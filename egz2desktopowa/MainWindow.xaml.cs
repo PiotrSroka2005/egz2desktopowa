@@ -19,6 +19,28 @@ namespace egz2desktopowa
         public MainWindow()
         {
             InitializeComponent();
+
+            
+        }
+
+        private void Sprawdz_Click(object sender, RoutedEventArgs e)
+        {
+            if (RadioButtonPocztowka.IsChecked == true)
+            {
+                Cena.Content = "Cena: 1 zł";
+                Zdjecie.Source = new BitmapImage(new Uri(@"/Images/pocztowka.png", UriKind.Relative));
+
+            }
+            else if (RadioButtonList.IsChecked == true)
+            {
+                Cena.Content = "Cena: 1,5 zł";
+                Zdjecie.Source = new BitmapImage(new Uri(@"/Images/list.png", UriKind.Relative));
+            }
+            else if (RadioButtonPaczka.IsChecked == true)
+            {
+                Cena.Content = "Cena: 10 zł";
+                Zdjecie.Source = new BitmapImage(new Uri(@"/Images/paczka.png", UriKind.Relative));
+            }            
         }
     }
 }

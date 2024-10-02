@@ -18,9 +18,7 @@ namespace egz2desktopowa
     {
         public MainWindow()
         {
-            InitializeComponent();
-
-            
+            InitializeComponent();            
         }
 
         private void Sprawdz_Click(object sender, RoutedEventArgs e)
@@ -41,6 +39,33 @@ namespace egz2desktopowa
                 Cena.Content = "Cena: 10 zł";
                 Zdjecie.Source = new BitmapImage(new Uri(@"/Images/paczka.png", UriKind.Relative));
             }            
+        }
+
+        private void Zatwierdz_Click(object sender, RoutedEventArgs e)
+        {
+            string zawartoscKodu = Kod.Text;
+            bool zatwierdz = true;
+
+            if (zawartoscKodu.Length > 5)
+            {
+                MessageBox.Show("Nieprawidłowa liczba cyfr w kodzie pocztowym");
+                zatwierdz = false;
+            }
+            else
+            {
+                foreach (char c in zawartoscKodu)
+                {
+                    if (!char.IsDigit(c))
+                    {
+                        MessageBox.Show("Kod pocztowy powinien się składać z samych cyfr");
+                        zatwierdz = false;
+                        return;
+                    }
+                }
+            }
+
+            if (zatwierdz == true)
+                MessageBox.Show("Dane przesyłki zostały wprowadzone");
         }
     }
 }

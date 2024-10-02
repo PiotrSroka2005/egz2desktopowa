@@ -31,6 +31,17 @@
                 <Label Content="Cena: " FontSize="15" Margin="30,0,0,0" FontWeight="Bold" x:Name="Cena"/>
             </StackPanel>
         </StackPanel>
-       
+        <StackPanel Grid.Column="1" Grid.Row="0" Margin="10,20,50,0">
+            <GroupBox Header="Dane adresowe">
+                <StackPanel>
+                    <Label Margin="5,10,0,0" Content="Ulica z numerem" />
+                    <TextBox Margin="10,0,10,0" />
+                    <Label Margin="5,10,0,0" Content="Kod pocztowy"/>
+                    <TextBox Margin="10,0,130,0"  x:Name="Kod"/>
+                    <Label Margin="5,10,0,0" Content="Miasto" />
+                    <TextBox Margin="10,0,10,10"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
     </Grid>
 </Window>

@@ -15,5 +15,22 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0">
+            <StackPanel Margin="50,20,50,0">
+                <GroupBox Header="Rodzaj przesyłki">
+                    <StackPanel x:Name="StackPanelPrzesylki">
+                        <RadioButton Margin="5,10,0,0" Content="Pocztówka" x:Name="RadioButtonPocztowka"/>
+                        <RadioButton Margin="5,10,0,0" Content="List" IsChecked="True" x:Name="RadioButtonList"/>
+                        <RadioButton Margin="5,10,0,0" Content="Paczka" x:Name="RadioButtonPaczka"/>
+                    </StackPanel>
+                </GroupBox>
+                <Button Content="Sprawdź Cenę" Margin="0,10,0,0" Click="Sprawdz_Click"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="50,10,0,0">
+                <Image Source="Images/pocztowka.png" />
+                <Label Content="Cena: " FontSize="15" Margin="30,0,0,0" FontWeight="Bold" x:Name="Cena"/>
+            </StackPanel>
+        </StackPanel>
+       
     </Grid>
 </Window>

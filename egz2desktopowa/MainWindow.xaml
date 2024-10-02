@@ -43,5 +43,6 @@
                 </StackPanel>
             </GroupBox>
         </StackPanel>
+        <Button Content="Zatwierdź" Grid.Column="0" Click="Zatwierdz_Click" Grid.Row="1" Margin="50,20,50,0" Grid.ColumnSpan="2" />
     </Grid>
 </Window>
